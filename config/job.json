@@ -1,0 +1,131 @@
+{
+  "serviceName": "job",
+  "log": {
+    "service": "job",
+    "host": "",
+    "caller": false,
+    "stdout": true
+  },
+  "tracer": {
+    "tracingType": "jaeger",
+    "samplerType": "const",
+    "samplerParam": "1",
+    "senderType": "http",
+    "endpoint": "http://cyril.develop:14268/api/traces"
+  },
+  "ginServer": {
+    "version": "0.0.1",
+    "host": "localhost",
+    "ip": "0.0.0.0",
+    "port": 4040,
+    "timeout": 5,
+    "debug": false,
+    "pprof": true,
+    "readTimeout": 1,
+    "writeTimeout": 1,
+    "centerAddr": [
+      "http://cyril.develop:8761",
+      "http://cyril.develop:8762",
+      "http://cyril.develop:8763"
+    ],
+    "centerName": "discovery",
+    "registerTTL": 30,
+    "renewalIntervalInSecs": 5,
+    "registryFetchIntervalSeconds": 3,
+    "rollDiscoveriesIntervalSeconds": 5,
+    "durationInSecs": 60,
+    "disableAccessLog": false
+  },
+  "microServer": {
+    "serverName": "job",
+    "centerAddr": [
+      "http://127.0.0.1:2379"
+    ],
+    "user": "root",
+    "password": "12345678",
+    "serviceName": "job",
+    "poolSize": 100,
+    "retries": 1,
+    "poolTTL": 10,
+    "requestTimeout": 5,
+    "dialTimeout": 5,
+    "rpcRegister": "etcd",
+    "disableTracer": false,
+    "enableBreaker": false,
+    "registerTTL": 30,
+    "registerInterval": 5,
+    "renewalIntervalInSecs": 3,
+    "rollDiscoveriesIntervalSeconds": 5,
+    "dataCenterName": "discovery",
+    "serverVersion": "1.0.1",
+    "address": ":10086",
+    "serverOnly": true
+  },
+  "httpClient": {
+    "addr": ":8080",
+    "timeout": 1,
+    "readtimeout": 1,
+    "writetimeout": 1
+  },
+  "redis": {
+    "name": "job",
+    "proto": "tcp",
+    "addr": "http://cyril.develop:6379",
+    "auth": "",
+    "dialTimeout": "200ms",
+    "readTimeout": "200ms",
+    "writeTimeout": "200ms",
+    "expire": 10,
+    "pool": {
+      "active": 200,
+      "idle": 200,
+      "idleTimeout": "80s"
+    }
+  },
+  "db": {
+    "type": "mysql",
+    "server": "cyril.develop",
+    "port": 3306,
+    "database": "job",
+    "user": "root",
+    "password": "12345678",
+    "maxIdleConns": 100,
+    "maxOpenConns": 100,
+    "maxLeftTime": 300
+  },
+  "elastic": {
+    "addrs": [
+      "http://cyril.develop:9200"
+    ],
+    "username": "",
+    "password": "",
+    "healthcheckEnabled": true,
+    "snifferEnabled": false,
+    "healthtimeout": 3,
+    "snifferTimeout": 3
+  },
+  "rocketMq": {
+    "dsn": [
+      "http://cyril.develop:9876"
+    ],
+    "namespace": "",
+    "producer": {
+      "send_msg_timeout": 2,
+      "retry_times": 2
+    },
+    "consumer": {
+      "consumer_model": 2,
+      "from_where": 1,
+      "consume_orderly": false,
+      "consume_message_batch_max_size": 1,
+      "retry_times": 5,
+      "max_reconsume_times": 5,
+      "auto_commit": false,
+      "tag_expression": ""
+    }
+  },
+  "expressTracing": {
+    "appCode": "1234567890"
+  },
+  "zmsUrl": "zhumusheng"
+}
