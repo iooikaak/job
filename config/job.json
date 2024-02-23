@@ -11,7 +11,7 @@
     "samplerType": "const",
     "samplerParam": "1",
     "senderType": "http",
-    "endpoint": "http://cyril.develop:14268/api/traces"
+    "endpoint": "http://127.0.0.1:14268/api/traces"
   },
   "ginServer": {
     "version": "0.0.1",
@@ -24,9 +24,9 @@
     "readTimeout": 1,
     "writeTimeout": 1,
     "centerAddr": [
-      "http://cyril.develop:8761",
-      "http://cyril.develop:8762",
-      "http://cyril.develop:8763"
+      "http://127.0.0.1:8761",
+      "http://127.0.0.1:8762",
+      "http://127.0.0.1:8763"
     ],
     "centerName": "discovery",
     "registerTTL": 30,
@@ -70,7 +70,7 @@
   "redis": {
     "name": "job",
     "proto": "tcp",
-    "addr": "http://cyril.develop:6379",
+    "addr": "http://127.0.0.1:6379",
     "auth": "",
     "dialTimeout": "200ms",
     "readTimeout": "200ms",
@@ -84,7 +84,7 @@
   },
   "db": {
     "type": "mysql",
-    "server": "cyril.develop",
+    "server": "127.0.0.1",
     "port": 3306,
     "database": "job",
     "user": "root",
@@ -95,7 +95,7 @@
   },
   "elastic": {
     "addrs": [
-      "http://cyril.develop:9200"
+      "http://127.0.0.1:9200"
     ],
     "username": "",
     "password": "",
@@ -106,7 +106,7 @@
   },
   "rocketMq": {
     "dsn": [
-      "http://cyril.develop:9876"
+      "http://127.0.0.1:9876"
     ],
     "namespace": "",
     "producer": {

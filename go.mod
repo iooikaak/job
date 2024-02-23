@@ -1,10 +1,10 @@
 module github.com/iooikaak/job
 
-go 1.22
+go 1.21
 
 require (
 	github.com/gogf/gf v1.16.9
-	github.com/iooikaak/frame v0.0.0-20240222112227-92256e7348b9
+	github.com/iooikaak/frame v0.0.0-20240222150429-22cd4d3985bc
 	github.com/robfig/cron v1.2.0
 	golang.org/x/text v0.6.0
 )

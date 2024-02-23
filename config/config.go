@@ -6,7 +6,6 @@ import (
 	"github.com/iooikaak/frame/common/kdniao"
 	"github.com/iooikaak/frame/json"
 	"github.com/iooikaak/job/common/model/enum"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 
@@ -61,7 +60,7 @@ func Init() (err error) {
 	if err != nil {
 		return
 	}
-	jsonRead, err := ioutil.ReadFile(jsonFIle)
+	jsonRead, err := os.ReadFile(jsonFIle)
 	if err != nil {
 		return
 	}

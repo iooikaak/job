@@ -20,9 +20,10 @@ func main() {
 	flag.Parse()
 	//远程读取apollo配置文件
 	//初始化apollo
-	if err := config.ApolloInit(); err != nil {
-		panic(err)
-	}
+	//if err := config.ApolloInit(); err != nil {
+	//	panic(err)
+	//}
+	config.Init()
 	// 启动框架
 	app := bootstrap.New(bootstrap.Config{
 		Log:         config.Conf.Log,
